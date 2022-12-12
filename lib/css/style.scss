@@ -1,0 +1,232 @@
+@font-face {
+    font-family: "Helvetica Neue Thin";
+    src: url(../font/helveticaneue-thin.ttf);
+}
+
+@font-face {
+    font-family: "Helvetica Neue Bold";
+    src: url(../font/helveticaneueltstd-bd.otf);
+}
+
+@font-face {
+    font-family: "Kiona";
+    src: url(../font/kiona-regular.ttf);
+}
+
+@import 'header';
+@import 'main';
+@import 'footer';
+@import 'spa';
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font: inherit;
+}
+
+img,
+picture,
+svg,
+video {
+    display: block;
+    max-width: 100%;
+}
+
+.container {
+    position: relative;
+    @media(min-width: 1200px) {
+        max-width: 1200px;
+    }
+    @media(max-width:991.98px) {
+        // max-width: calc(100% - 60px);
+        max-width: 100%;
+    }
+}
+
+::-webkit-scrollbar {
+    width: 7px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+
+/* Handle */
+
+ ::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 24px;
+}
+
+
+/* Handle on hover */
+
+ ::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+:root {
+    --thm-font: "Helvetica Neue Thin";
+    --thm-font-bold: "Helvetica Neue Bold";
+    --thm-blue-color: #0a61a1;
+}
+
+body {
+    font-family: "Helvetica Neue Thin";
+    font-size: 13px;
+    letter-spacing: .5px;
+    overflow-x: hidden;
+    text-align: justify;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    color: #58595b;
+    strong {
+        font-family: "Helvetica Neue Bold";
+        color: #58595b;
+    }
+}
+
+dl,
+ol,
+ul {
+    margin-top: 0;
+    margin-bottom: 0;
+    list-style: none;
+}
+
+a {
+    &:hover,
+    &:focus,
+    &:visited {
+        text-decoration: none;
+    }
+}
+
+.flagvie {
+    margin-right: 2px;
+}
+
+p {
+    margin: 8px 0;
+}
+
+.book-btn {
+    height: 40px;
+    width: 134px;
+    background: #d9b780;
+    color: #fff;
+    text-align: center;
+    line-height: 40px;
+    font-family: "Helvetica Neue Bold";
+    cursor: pointer;
+    vertical-align: middle;
+    &:hover {
+        background: #bda071;
+        color: #fff;
+        border-color: #bda071;
+    }
+}
+
+input,
+select {
+    background-color: transparent;
+    font-size: 16px;
+    border-radius: 0;
+    outline: none;
+    transition: box-shadow .3s, border .3s, -webkit-box-shadow .3s;
+}
+
+.slick-prev {
+    &::before {
+        content: '\f053';
+        font-family: fontawesome;
+        color: var(--thm-blue-color);
+        font-size: 28px;
+    }
+}
+
+.slick-next {
+    &::before {
+        content: '\f054';
+        font-family: fontawesome;
+        color: var(--thm-blue-color);
+        font-size: 28px;
+    }
+}
+
+section.contact {
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 60px 0;
+    background-position: bottom;
+    position: relative;
+    background-attachment: fixed;
+    h3 {
+        position: relative;
+        text-transform: uppercase;
+        font-family: "Kiona";
+        font-size: 20px;
+        letter-spacing: 6px;
+        margin: 0 0 30px;
+        color: #fff;
+        padding: 0;
+    }
+    #formContact {
+        .form-group {
+            input,
+            select,
+            textarea {
+                width: 100%;
+                background-color: transparent;
+                border: 0;
+                border-radius: 0;
+                border-bottom: 1px solid #fff !important;
+                box-shadow: 0 0 0 0 #fff !important;
+                margin-bottom: 0;
+                color: #fff;
+                &::placeholder {
+                    color: #fff;
+                }
+            }
+            input,
+            select {
+                height: 3rem;
+                padding: 0;
+                margin: 0 0 8px 0;
+            }
+        }
+    }
+}
+
+.contact:before,
+.impress:before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, .5);
+}
+
+#btnsend {
+    cursor: pointer;
+    border: 1px solid #fff;
+    box-shadow: none;
+    background: 0 0;
+    padding: 10px 60px;
+    color: #fff;
+    text-transform: uppercase;
+    font-family: "Helvetica Neue Bold";
+    font-size: 13px;
+    margin: 30px 0 0;
+    transition: all .5s;
+    -moz-transition: all .5s;
+    -webkit-transition: all .5s;
+}
